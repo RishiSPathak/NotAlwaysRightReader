@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Activities.SettingsActivity">
+
+    <View android:id="@+id/settings_activity_centre_marker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/buttonSettingsBack"
+        style="@style/myButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/backButtonText" />
+
+    <TextView
+        android:id="@+id/textViewSelectMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/settings_activity_centre_marker"
+        android:textSize="20sp"
+        android:layout_margin="3dp"
+        android:text="@string/select_app_mode" />
+
+    <TextView
+        android:id="@+id/textViewArticleOpenMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textViewSelectMode"
+        android:layout_toStartOf="@+id/settings_activity_centre_marker"
+        android:textSize="20sp"
+        android:layout_margin="3dp"
+        android:text="@string/article_open_mode" />
+
+    <Spinner
+        android:id="@+id/modeSelectorSpinner"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/settings_activity_centre_marker"
+        android:layout_margin="3dp"
+        android:entries="@array/searchModes"
+        android:prompt="@string/modePrompt"
+        android:textSize="20sp"/>
+
+    <Spinner
+        android:id="@+id/articleOpenSelectorSpinner"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSelectMode"
+        android:layout_toEndOf="@+id/settings_activity_centre_marker"
+        android:layout_margin="3dp"
+        android:entries="@array/articleOpenModes"
+        android:prompt="@string/modePrompt"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/articleOnlyOpenNewSwitch"
+        android:theme="@style/mySwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/article_only_open_new"
+        android:layout_below="@id/textViewArticleOpenMethod"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        android:layout_margin="3dp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonClearReadArticles"
+        android:theme="@style/mySwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/articleOnlyOpenNewSwitch"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewClearReadArticles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/articleOnlyOpenNewSwitch"
+        android:layout_toStartOf="@+id/settings_activity_centre_marker"
+        android:textSize="20sp"
+        android:layout_margin="3dp"
+        android:text="@string/clear_read_articles" />
+
+
+</RelativeLayout>

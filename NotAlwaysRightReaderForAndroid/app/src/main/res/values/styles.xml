@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerStyle">@style/myDatePickerStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerStyle</item>
+        <item name="android:spinnerItemStyle">@style/mySpinnerStyle</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!-- Date picker styling-->
+    <style name="myDatePickerStyle" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:colorControlActivated">@color/colorRed</item>
+    </style>
+
+    <!-- Button styling-->
+    <style name="myButtonStyle" parent="android:Widget.Button">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/button_style_master</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="myScrollButtonStyle" parent="android:Widget.Button">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/button_style_master</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">100dp</item>
+    </style>
+
+    <!-- Spinner styling-->
+    <style name="mySpinnerStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Switch Styling styling-->
+    <style name="mySwitchStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorRed</item>
+        <item name="colorControlNormal">@color/colorBlack</item>
+    </style>
+</resources>

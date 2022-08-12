@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Activities.MainActivity">
+
+    <View android:id="@+id/main_activity_centre_marker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/buttonMatchDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        style="@style/myButtonStyle"
+        android:text="@string/matchDatesButtonText" />
+
+    <Button
+        android:id="@+id/buttonSetDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        style="@style/myButtonStyle"
+        android:text="@string/setDateButtonText" />
+
+    <Button
+        android:id="@+id/buttonStartDate"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonMatchDates"
+        android:layout_toStartOf="@+id/main_activity_centre_marker"
+        style="@style/myButtonStyle"
+        android:text="@string/setStartDateButtonText" />
+
+    <Button
+        android:id="@+id/buttonEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonMatchDates"
+        android:layout_toEndOf="@+id/buttonStartDate"
+        style="@style/myButtonStyle"
+        android:text="@string/setEndDateButtonText" />
+
+    <Button
+        android:id="@+id/buttonAddDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/myButtonStyle"
+        android:text="@string/addDateButtonText" />
+
+    <Button
+        android:id="@+id/buttonRemoveFirstDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAddDate"
+        android:layout_toStartOf="@+id/main_activity_centre_marker"
+        style="@style/myButtonStyle"
+        android:text="@string/removeFirstDateButtonText" />
+
+    <Button
+        android:id="@+id/buttonResetDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAddDate"
+        android:layout_toEndOf="@+id/buttonRemoveFirstDate"
+        style="@style/myButtonStyle"
+        android:text="@string/resetDatesButtonText" />
+
+    <TextView
+        android:id="@+id/textViewDateRangeSelectedDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="3dp"
+        android:textSize="20sp"
+        android:layout_below="@id/buttonStartDate" />
+
+    <TextView
+        android:id="@+id/textViewSingleDateSelectedDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="3dp"
+        android:textSize="20sp"
+        android:layout_below="@id/buttonSetDate" />
+
+    <TextView
+        android:id="@+id/textViewDateListSelectedDates"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/buttonRemoveFirstDate"
+        android:layout_above="@+id/main_activity_centre_marker"
+        android:layout_margin="3dp"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_below="@+id/activityIndicator"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:progressTint="@color/colorRed"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewCurrentTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:layout_margin="3dp"
+        android:layout_below="@id/progressBar" />
+
+    <ProgressBar
+        android:id="@+id/activityIndicator"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/round_progress_bar"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buttonViewArticles"
+        style="@style/myButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCurrentTask"
+        android:text="@string/viewArticlesButtonText" />
+
+    <Button
+        android:id="@+id/buttonAllAndUnfiltered"
+        style="@style/myButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_activity_bottom_scroll"
+        android:text="@string/allAndUnfilteredButtonText" />
+
+    <HorizontalScrollView
+        android:id="@+id/main_activity_bottom_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAll"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/allButtonText" />
+
+            <Button
+                android:id="@+id/buttonRight"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/rightButtonText" />
+
+            <Button
+                android:id="@+id/buttonWorking"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/workingButtonText" />
+
+            <Button
+                android:id="@+id/buttonRomantic"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/romanticButtonText" />
+
+            <Button
+                android:id="@+id/buttonRelated"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/relatedButtonText" />
+
+            <Button
+                android:id="@+id/buttonLearning"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/learningButtonText" />
+
+            <Button
+                android:id="@+id/buttonFriendly"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/friendlyButtonText" />
+
+            <Button
+                android:id="@+id/buttonHopeless"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/hopelessButtonText" />
+
+            <Button
+                android:id="@+id/buttonHealthy"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/healthyButtonText" />
+
+            <Button
+                android:id="@+id/buttonLegal"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/legalButtonText" />
+
+            <Button
+                android:id="@+id/buttonUnfiltered"
+                style="@style/myScrollButtonStyle"
+                android:layout_height="wrap_content"
+                android:text="@string/unfilteredButtonText" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
