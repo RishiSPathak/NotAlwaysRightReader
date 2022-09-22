@@ -1,4 +1,4 @@
-# Not Always Right Reader
+# Reader For Not Always Right
 
 ## Description
 
