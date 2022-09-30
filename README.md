@@ -4,7 +4,7 @@
 
 This is an android app that loads posts from the website notalwaysright.com, a site that I used to frequently visit. It will by default open each post made on the selected date(s) from the selected categories in a separate tab. Alternatively the posts can be opened inside the app one at a time. As the website only shows five articles at a time before needing to load a new page and reading the comments section for an article requires opening the page for that article, I found it convenient to load articles in bulk based on their category and the date that they were posted.
 
-Made in Java using [Android Studio](https://developer.android.com/studio), [jsoup](https://jsoup.org/), and [ThreeTen Backport](https://www.threeten.org/threetenbp/). I selected jsoup for parsing the html from the Not Always Right website. ThreeTen Backport was utilized so that I could use the JSR-310 API (for handling dates) on devices that did not support it (such as the Samsung Galaxy S5).
+Made in Java using [Android Studio](https://developer.android.com/studio), [jsoup](https://jsoup.org/), and [ThreeTen Backport](https://www.threeten.org/threetenbp/). I selected jsoup for parsing the html from the Not Always Right website. ThreeTen Backport was utilized so that I could use the JSR-310 API (Java 8 date and time library) on devices that did not support it (such as the Samsung Galaxy S5).
 
 ## Installation
 
