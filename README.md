@@ -18,7 +18,7 @@ The first time you use the app you should use the gear in the upper right hand c
 
 ![image](https://user-images.githubusercontent.com/111155048/191288181-5e0cadbe-f94c-4710-8b3a-9c4bffaa65ba.png)
 
-The first time you use the app you should use the gear in the upper right-hand corner to select the settings you want to use. You can choose from 3 methods of selecting dates (one data, consecutive range of dates, or list of dates), whether you want posts opened in the app or your browser, and if the app should only open articles that you have not opened before. An article is marked as read when the app sends it to your browser to open or is opened in the app. This menu also includes the option to reset the list of read articles.
+On the main page of the app simply choose the date(s) you wish to view posts on and then choose the category you want the posts to be from. The bottom row of buttons scrolls to reveal more categories. After a short wait (the length of the wait is greater when looking for older posts) the posts will open in your browser, or a button will appear to view them in the app. When the app sends a post to your browser to open, or you view the post in the app it will be marked as read and will not show up in future searches if the app is set to only show new posts.
 
 ## About the Author
 
